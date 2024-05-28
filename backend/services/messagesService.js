@@ -4,10 +4,6 @@ const fileHelper = require("../helpers/filesHelper");
 const filePath = path.join(process.cwd(), 'messages.json')
 
 class MessagesService {
-    constructor() {
-        this.getMessages = this.getMessages.bind(this)
-    }
-
     getMessages() {
         return fileHelper.readFile(filePath);
     }
